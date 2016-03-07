@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
+var http = require('http');
 
 var app = express();
 
@@ -20,40 +21,9 @@ app.use('/', function(req, res){
   res.render('index');
 });
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
-
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
-
 app.set("port", process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set("ip", process.env.OPENSHIFT_NODEJS_IP || 'localhost');
 
-app.listen(app.get('port'), app.get('ip'), function(){
-  console.log("app is running at IP: " + app.get('ip') + " on port: " + app.get('port'));
-})
+http.createServer(app).listen(app.get('port') ,app.get('ip'), function () {
+    console.log("✔ Express server listening at %s:%d ", app.get('ip'),app.get('port'));
+});
