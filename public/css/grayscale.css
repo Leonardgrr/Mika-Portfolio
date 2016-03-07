@@ -265,12 +265,29 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/orlando-city.jpg) no-repeat center center scroll;
+    background-position: 100% 60%;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    min-height: 360px;
+}
+.expertise-outer h2{
+    display:inline-block;
+    background:rgba(0,0,0,.5);
+    border-radius: 5px;
+    padding:10px;
+}
+.expertise-inner {
+    background:rgba(0,0,0,.5);
+    border-radius: 5px;
+}
+.inner-box {
+    display:inline-block;
+    width:33%;
+    padding:1%;
 }
 
 #map {
