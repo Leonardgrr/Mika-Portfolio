@@ -13,7 +13,7 @@
     "florida"
   ],
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "main": "server.js",
   "author": {
