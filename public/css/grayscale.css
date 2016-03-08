@@ -274,6 +274,9 @@ a:focus {
     -o-background-size: cover;
     min-height: 360px;
 }
+.expertise-outer {
+    float:none;
+}
 .expertise-outer h2{
     display:inline-block;
     background:rgba(0,0,0,.5);
@@ -285,9 +288,43 @@ a:focus {
     border-radius: 5px;
 }
 .inner-box {
-    display:inline-block;
+    display:inline-table;
     width:33%;
     padding:1%;
+}
+.inner-box h3 {
+    color:#42dca3;
+}
+.inner-box p{
+    margin:5px 0px;
+}
+
+.single-work-item {
+    position: relative;
+    cursor:pointer;
+}
+.single-work-item img{
+    width:80%;
+    margin:0 auto;
+}
+.hover-cover {
+    position: absolute;
+    height:100%;
+    width:90%;
+    text-align: center;
+    z-index: 10;
+    height:0;
+    overflow: hidden;
+    background:rgba(0,0,0,.5);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.hover-cover h3, .hover-cover p {
+    width:100%;
+}
+.single-work-item:hover .hover-cover {
+    height:100px;
 }
 
 #map {
