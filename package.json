@@ -19,7 +19,9 @@
   "author": {
     "name": "Mika Gurrola",
     "email": "something@somewhere.com",
+    "url":""
   },
+  "homepage":"",
   "repository": {
     "type": "git",
     "url": "https://github.com/openshift/origin-server"
