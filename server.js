@@ -2,11 +2,19 @@ var express = require('express');
 var app = express();
 var http = require('http');
 
-app.use(express.static('public'));
-app.engine('html', require('ejs').renderFile);
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-app.get('/', function(req, res){
-    res.render('index.html');
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+//application root
+app.use('/', function(req, res){
+  res.render('index');
 });
 
 app.set("port", process.env.OPENSHIFT_NODEJS_PORT || 8080);
