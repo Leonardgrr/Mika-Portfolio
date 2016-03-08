@@ -1,26 +1,39 @@
 {
-  "name": "mikePortfolio",
-  "description": "Mika Gurrola - Web Designer and Developer",
+  "name": "Mika-Gurrola-Portfolio",
+  "version": "1.0.0",
+  "description": "Mike Gurrola - web developer personal portfolio",
   "keywords": [
     "Mika",
     "Gurrola",
     "web",
-    "designer",
     "developer",
+    "designer",
+    "development",
     "orlando",
-    "florida",
-    "fl"
+    "florida"
   ],
-  "version": "0.0.0",
-  "private": true,
   "scripts": {
     "start": "node app.js"
   },
+  "main": "server.js",
+  "author": {
+    "name": "Mika Gurrola",
+    "email": "something@somewhere.com",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openshift/origin-server"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
   "dependencies": {
-    "body-parser": "~1.13.2",
-    "debug": "~2.2.0",
     "ejs": "^2.4.1",
-    "express": "~4.13.1",
-    "serve-favicon": "~2.3.0"
-  }
+    "express": "~3.4.4",
+    "express-generator": "^4.13.1"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true
 }
