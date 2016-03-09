@@ -309,7 +309,7 @@ a:focus {
 }
 .hover-cover {
     position: absolute;
-    height:100%;
+    height:0;
     width:90%;
     text-align: center;
     z-index: 10;
@@ -322,9 +322,16 @@ a:focus {
 }
 .hover-cover h3, .hover-cover p {
     width:100%;
+    position: absolute;
+}
+.hover-cover h3 {
+    top:0;
+}
+.hover-cover p{
+    bottom:0;
 }
 .single-work-item:hover .hover-cover {
-    height:100px;
+    height:100%;
 }
 
 #map {
