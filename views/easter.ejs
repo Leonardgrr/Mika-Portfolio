@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mika Gurrola - Easter Egg Page</title>
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+	<div class="main-outer">
+		<!-- The following line uses the EJS delimiter to put the 'today' data into the template sent from the 'server.js' file -->
+		<p class="today">Today's Date Is: <%- today %></p>
+		<img class="mario-sprite" src="../img/walking.gif"/>
+		<img class="coin" src="../img/coin.gif"/>
+		<img class="box" src="../img/question.gif"/>
+		<button class="start-animation">Start Animation</button>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

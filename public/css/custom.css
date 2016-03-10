@@ -1,0 +1,103 @@
+body, html {
+	height:100%;
+}
+body {
+	margin:0;
+	padding:0;
+}
+.main-outer {
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	background:url('../img/mario-bg.png');
+	background-size: auto 100%;
+	max-width: 1305px;
+	overflow: hidden;
+}
+.today {
+	margin-left: 2%;
+	font-size: 20px;
+	font-family: monospace;
+}
+.mario-sprite {
+	width: auto;
+	height: 15%;
+	position: absolute;
+	left:16%;
+	bottom: 15%;
+	-webkit-transition: ;
+	-o-transition: ;
+	transition: ;
+}
+.coin {
+	position: absolute;
+	bottom: 40%;
+	height: 8%;
+	left: 48.5%;
+	opacity: 1;
+}
+.box {
+	position: absolute;
+	bottom: 40%;
+	height: 8%;
+	left: 48%;
+}
+.start-animation {
+	position: absolute;
+	bottom: 4%;
+	left: 44%;
+	background: white;
+	border: none;
+	font-size: 26px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px black;
+	padding: 5px 12px;
+}
+.start-animation:active {
+	cursor:pointer;
+	box-shadow: none;	
+}
+.animate-mario {
+	animation-name:animateMario;
+	animation-duration:4s;
+	animation-timing-function:linear;
+}
+.animate-coin {
+	animation-name:animateCoin;
+	animation-duration:4s;
+	animation-timing-function:linear;
+}
+
+
+
+@-webkit-keyframes animateMario {
+	0% {left: 16%;}
+	45% {left:44%;bottom:15%;}
+	50% {left: 48%; bottom:26%;}
+	55% {left: 52%; bottom:15%;}
+	100% {left: 80%;}
+}	
+@keyframes animateMario {
+   0% {left: 16%;}
+   45% {left:44%;bottom:15%;}
+   50% {left: 48%; bottom:26%;}
+   55% {left: 52%; bottom:15%;}
+   100% {left: 80%;}
+}
+
+@-webkit-keyframes animateCoin {
+   0% {bottom: 40%;}
+   49% {bottom: 40%;}
+   55% {bottom: 60%;opacity:1;}
+   60% {bottom: 60%;opacity:1;}
+   61% {opacity:0;}
+   100% {opacity:0;}
+}
+@keyframes animateCoin {
+   0% {bottom: 40%;}
+   49% {bottom: 40%;}
+   55% {bottom: 60%;opacity:1;}
+   60% {bottom: 60%;opacity:1;}
+   61% {opacity:0;}
+   100% {opacity:0;}
+}
